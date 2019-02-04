@@ -10,14 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBAction func touchCard(_ sender: UIButton) {
-        flipCard(withEmoji: "👻", on: sender)
+    var flipCount = 0 { // no decimals means that it is inferred as Int
+        didSet{ // property observer
+            flipCountLabel.text = "Flips: \(flipCount)"
+        }
     }
+    
+    @IBOutlet weak var flipCountLabel: UILabel! // outlets create instance variables
+    
+    @IBOutlet var cardButtons: [UIButton]! // to rename the variable, use cmd click
+    
+    var emojiChoices = ["🎃","👻","🎃","👻"] // no need for Array<String> due to inference
+    
+    @IBAction func touchCard(_ sender: UIButton) { // actions create methods
+        flipCount += 1
+        if  let cardNumber = cardButtons.index(of: sender){
+            flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
+        }
+        else {
+            print("chosen card was not in cardButtons")
+        }
+    }
+    
     
     func flipCard(withEmoji emoji: String, on button: UIButton){
         if button.currentTitle == emoji {
             button.setTitle("", for: UIControl.State.normal)
-            button.backgroundColor = #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)
+            button.backgroundColor = #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
             
         }
         else {
