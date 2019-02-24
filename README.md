@@ -1,5 +1,5 @@
 # Concentration Game
-An iOS based Halloween themed game of Concentration inspired by CS193P taught at Stanford University.
+Welcome! This is iOS based Halloween themed game of Concentration inspired by CS193P taught at Stanford University.
 
 **What is this game?** <br/>
 This is a simple game of concentration designed currently for the iPhone, mainly for teaching myself how to develop applications for iOS. Though please feel free to fork this project anytime and build on it. 
