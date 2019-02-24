@@ -12,3 +12,6 @@ If you're new to iOS developement as well or you just want to build on your exis
 
 **Who's Involved?** <br/>
 I am the sole contributor to this repository at the moment. While the skeletal code is courtesy of the online Stanford lectures on iTunesU, I am constantly making imporvements and adding new features to the game to test what I have learned from the course.  
+
+**What can you expect in the future?** <br/>
+I am also currently planning and conceptualizing tvOS and macOS versions of the game that I hope to release in the coming months. 
